@@ -3,41 +3,238 @@
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <b:skin><![CDATA[
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Carga de fuentes desde Google Fonts: Montserrat, Raleway, Roboto Mono y Roboto */
+
+
+/* General */
+* {
+    box-sizing: border-box; /* Aplicado globalmente para que el padding y border no afecten al tamaño total de los elementos */
+}
+
 /* Cabecera */
 .header {
-    background-color: #efefef;
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 4px solid #770000;
-    margin-bottom: 20px;
+    background-color: #efefef; /* Fondo claro para la cabecera */
+    padding: 3em 0.7em 0.4em 0.7em; /* Espaciado interno */
+    border-bottom: 0.25em solid #770000; /* Línea de separación con color rojo oscuro */
+    margin-bottom: 20px; /* Separación entre la cabecera y el siguiente contenido */
+}
+
+.header-content {
+    display: flex; /* Flexbox para organizar el contenido dentro de la cabecera */
+    justify-content: space-between; /* Distribuir los elementos entre los extremos */
+    align-items: center; /* Alineación vertical al centro */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos de forma vertical */
+    justify-content: center; /* Centra los elementos verticalmente */
 }
 
 .header h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.1em;
-    color: #962715; /* Nuevo color para el título */
-    margin: 0;
-    line-height: 1.2;
+    font-size: 2.1em; /* Tamaño grande para el título */
+    color: #962715; /* Color rojo oscuro */
+    line-height: 0.2; /* Espaciado pequeño entre las líneas */
+    padding: 0 0 0 0.4375em; /* Espaciado izquierdo para alineación */
 }
 
-.header h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2em;
-    color: #1e1e20; /* Nuevo color para la descripción */
-    margin: 0;
-    line-height: 1.4;
+.header .description span {
+    font-size: 1.2em; /* Tamaño de fuente para la descripción */
+    color: #1e1e20; /* Color negro para el texto de la descripción */
+    line-height: 0.2; /* Espaciado pequeño entre las líneas */
+    padding: 0 0 0 0.7em; /* Espaciado izquierdo para alinear con el título */
 }
 
+.logo {
+    height: 4.8125em; /* Ajuste de altura para la imagen del logo */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-left: auto; /* Empuja la imagen hacia la derecha */
+    padding: 0 0.4375em 0 0; /* Espaciado derecho */
+}
+
+/* Navegación */
+.nav a {
+    box-shadow: 0 0.25em 0.5em #1b1b1f; /* Sombra sutil alrededor de los enlaces */
+    font-size: 1em; /* Tamaño de fuente estándar para los enlaces */
+    font-weight: bold; /* Enfatiza los enlaces */
+    color: #962715; /* Color rojo para los enlaces */
+    text-decoration: underline; /* Subraya los enlaces */
+    padding: 0.3125em 0.625em; /* Espaciado interno */
+    border-radius: 0.3125em; /* Bordes redondeados */
+    background-color: #efefef; /* Fondo claro */
+    display: inline-block; /* Hace que los enlaces se comporten como bloques inline */
+    margin-right: 0.625em; /* Espaciado entre los enlaces */
+    border: 0.0625em solid #962715; /* Borde con el mismo color que el texto */
+}
+
+.nav a:hover {
+    background-color: #962715; /* Fondo rojo cuando se pasa el ratón */
+    color: #fff; /* Color blanco para el texto cuando se pasa el ratón */
+}
+
+.nav {
+    display: flex; /* Flexbox para distribuir los elementos de navegación */
+    justify-content: center; /* Centra los enlaces de navegación */
+    padding: 0 1.25em; /* Espaciado alrededor de los enlaces */
+    margin: 0;
+}
+
+.nav ul {
+    display: flex; /* Organiza los elementos de la lista en una fila */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+.nav li {
+    margin-right: 0.9375em; /* Espaciado entre los elementos de la lista */
+}
 
 /* Cuerpo */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #1e1e20; /* Nuevo color para el texto del cuerpo */
-    text-align: left;
+    font-family: 'Roboto', sans-serif; /* Fuente principal de todo el cuerpo */
+    margin: 0; /* Elimina los márgenes predeterminados del navegador */
+    padding: 0; /* Elimina el padding predeterminado del navegador */
+    background-color: #ffffff; /* Fondo blanco para el cuerpo */
+    color: #1e1e20; /* Color de texto negro */
+    text-align: left; /* Alineación de texto a la izquierda */
 }
+
+/* Blog */
+.Blog1 {
+    padding: 2.8125em; /* Espaciado alrededor de las entradas del blog */
+}
+
+/* Estilo de la entrada */
+.post {
+    background-color: #ffffff; /* Fondo blanco para cada entrada */
+    margin: 0 auto 1.25em auto; /* Centra las entradas y agrega margen inferior */
+    padding: 1.25em; /* Espaciado interno */
+    border-radius: 0.5em; /* Bordes redondeados */
+    box-shadow: 0 0.25em 0.5em #1e1e20; /* Sombra para un efecto de elevación */
+    max-width: 50em; /* Limita el ancho máximo de las entradas */
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+.post-header {
+    margin-bottom: 0.9375em; /* Espaciado inferior entre el encabezado y el contenido */
+}
+
+.post-title {
+    font-family: 'Raleway', sans-serif; /* Fuente diferente para el título */
+    font-size: 1.6em; /* Tamaño grande para el título */
+    color: #962715; /* Color rojo oscuro */
+    margin: 0; /* Elimina márgenes por defecto */
+    text-align: left; /* Alineación a la izquierda */
+    background-color: transparent; /* Fondo transparente */
+}
+
+.post-title a {
+    color: #962715; /* Color de los enlaces del título */
+    text-decoration: underline; /* Subrayado en los enlaces */
+    padding: 0.125em 0.375em; /* Espaciado interno del enlace */
+    border-radius: 0.3125em; /* Bordes redondeados */
+}
+
+.post-title a:hover {
+    color: #ffffff; /* Color blanco cuando el ratón pasa sobre el enlace */
+    background-color: #962715; /* Fondo rojo cuando el ratón pasa sobre el enlace */
+    border-radius: 0.3125em;
+}
+
+.post-body p {
+    font-size: 1.1em; /* Tamaño de fuente ligeramente más grande para el cuerpo de la entrada */
+    line-height: 1.6; /* Espaciado de línea mayor para una mejor legibilidad */
+    color: #1e1e20; /* Color negro para el texto */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.jump-link a {
+    background-color: #efefef; /* Fondo gris claro */
+    font-size: 1.1em; /* Tamaño de fuente estándar */
+    font-weight: bold; /* Texto en negrita */
+    color: #962715; /* Color rojo para el texto */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 0.375em 0.75em; /* Espaciado interno */
+    border-radius: 0.3125em; /* Bordes redondeados */
+    border: 0.0625em solid #962715; /* Borde rojo */
+    display: inline-block; /* Hace que el enlace se comporte como un bloque inline */
+    margin-top: 1.25em; /* Espaciado superior */
+    font-family: 'Raleway', sans-serif; /* Fuente para este enlace */
+    transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.jump-link a:hover {
+    background-color: #962715; /* Fondo rojo cuando se pasa el ratón */
+    color: #ffffff; /* Color blanco para el texto cuando se pasa el ratón */
+}
+
+/* Pie de la entrada */
+.post-footer {
+    margin-top: 1.25em; /* Espaciado superior para el pie de la entrada */
+}
+
+/* Meta (fecha y comentarios) */
+.entry-meta {
+    display: flex; /* Flexbox para distribuir los elementos */
+    justify-content: flex-start; /* Alineación de los elementos al inicio */
+    align-items: center; /* Alineación vertical al centro */
+    gap: 0.625em; /* Espaciado entre los elementos */
+}
+
+.entry-meta .entry-date,
+.entry-meta .comments-link a {
+    font-size: 0.9em; /* Tamaño de fuente pequeño para la meta información */
+}
+
+.entry-meta .comments-link a {
+    color: #962715; /* Color rojo para los enlaces de comentarios */
+    text-decoration: underline; /* Subrayado */
+}
+
+.entry-meta .comments-link a:hover {
+    color: #1e1e20; /* Cambio de color al pasar el ratón sobre el enlace */
+}
+
+/* Estilo del Aside */
+#HTML1 .widget-content {
+    display: flex; /* Flexbox para organizar los widgets */
+    justify-content: space-between; /* Espaciado entre los widgets */
+    background-color: #d9e3e7; /* Fondo gris claro */
+    border-top: 0.25em solid #770000; /* Línea roja en la parte superior */
+    font-family: 'Raleway', sans-serif; /* Fuente para los widgets */
+    padding: 0.1em 0.7em 0 0.7em; /* Espaciado interno */
+}
+
+#politicas {
+    font-size: 0.9em; /* Tamaño de fuente pequeño */
+    text-align: left; /* Alineación a la izquierda */
+    flex: 1; /* Hace que ocupe el 50% del espacio disponible */
+    margin: 0;
+    padding: 0px 0px 0px 0.4375em;
+}
+
+#licencia {
+    font-size: 0.9em; /* Tamaño de fuente pequeño */
+    text-align: right; /* Alineación a la derecha */
+    flex: 1; /* Hace que ocupe el 50% del espacio disponible */
+    margin: 0;
+    padding: 0px 0.4375em 0px 0px;
+}
+
+#cclicencia {
+    height: 3.0625em; /* Ajuste de altura para la imagen */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-left: auto; /* Empuja la imagen hacia la derecha */
+    padding: 0px 0.4375em 0px 0px; /* Espaciado derecho */
+}
+
+
+
 
 
 
@@ -1006,6 +1203,29 @@ body {
     </div>
     </div>
   </div>
+</b:includable>
+      </b:widget>
+      <b:widget id='HTML1' locked='false' title='' type='HTML'>
+        <b:widget-settings>
+          <b:widget-setting name='content'><![CDATA[<section id="politicas">
+                <!-- Enlace a la política de privacidad y cookies -->
+                <p class="politicas"><a href="https://www.blogger.com/go/blogspot-cookies" target="_blank">Política de privacidad y cookies</a></p>
+            </section>
+            <section id="licencia">
+                <!-- Enlace a la licencia del contenido del blog -->
+                <p class="licencia"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhc3JyqtggiK8g92ssWS-O9JqrZFajV11FdoSW-F_VUZ8waLWFSGWcjN5n59IjFpfJiTDETJ4vT9xkqhwE-qCjRw4hfi07U3_0cqUsBolOk-tYl32n_6Th_gDhTYx8tUDLeoEHa7v5xVCtFPTbxDMEBkHPTQhd6cL_W55U9Kz2L9NKzesNIbd0GELBQdOQ/s320/cc_by-nc-nd.png" id="cclicencia" alt="Licencia Creative Commons CC-BY-NC-ND" /></a></p>
+            </section>]]></b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
       </b:widget>
     </b:section>
