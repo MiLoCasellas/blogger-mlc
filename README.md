@@ -11,3 +11,5 @@ El trabajo realmente lo llevo a cabo en mi otro repositorio con el HTML, CSS, et
 En el propio blog he creado una página estática donde voy publicando capturas de pantalla de la evolución del blog:
 
 https://milocuencia.blogspot.com/p/evolucion-del-blog.html
+
+LIENCIA: Este repositorio está bajo la licencia CREATIVE COMMONS 4.0 (BY-NC-ND): https://github.com/MiLoCasellas/blogger-mlc/blob/main/LICENSE
