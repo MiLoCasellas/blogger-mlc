@@ -39,7 +39,7 @@
     font-size: 2.1em; /* Tamaño grande para el título */
     color: #962715; /* Color rojo oscuro */
     line-height: 0.2; /* Espaciado pequeño entre las líneas */
-    padding: 0 0 0 0.4375em; /* Espaciado izquierdo para alineación */
+    padding: 0 0 0.5em 0.4375em; /* Espaciado izquierdo para alineación */
 }
 
 .header .description span {
@@ -52,9 +52,11 @@
 .logo {
     height: 4.8125em; /* Ajuste de altura para la imagen del logo */
     width: auto; /* Mantiene la proporción de la imagen */
-    margin-left: auto; /* Empuja la imagen hacia la derecha */
+    float: right; /* Flota la imagen a la derecha */
+    margin-left: 0.4375em; /* Espaciado izquierdo (opcional) */
     padding: 0 0.4375em 0 0; /* Espaciado derecho */
 }
+
 
 /* Navegación */
 .nav a {
@@ -244,7 +246,7 @@ body {
   </head>
   <body>
     <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-      <b:widget id='Header1' locked='false' title='MiLocuencia (cabecera)' type='Header'>
+      <b:widget id='Header1' locked='false' title='MiLocuencia (cabecera)' type='Header' version='1'>
         <b:widget-settings>
           <b:widget-setting name='displayUrl'/>
           <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -299,7 +301,8 @@ body {
     </b:if>
   <b:else/>
     <!--No header image -->
-    <div id='header-inner'>
+    <div id='header-inner'>  <!-- LOGOTIPO -->
+      <img alt='Logo de MiLocuencia' aria-label='Logo de MiLocuencia' class='logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs0kWcJtXThcHRsuTXFK2bMVyHVs8CIjY-4Oks9d-PFPKdOqXw-tg4YVBoNOUaxhqG1GgwWXKEqAi2zPwp7-lFq3aaDTLBaeiYaD4UoqooNEdmNKHQz0p6i2xhuRDIK0O0eiCFLn3MFV_oMXNr7y3qrDk_rd27A835KIHFEsxv2eMfv3LYyz_5HP-xdNA/s320/milocuencia_logo.png'/>
       <div class='titlewrapper'>
         <h1 class='title'>
           <b:include name='title'/>
@@ -372,10 +375,12 @@ body {
           <b:widget-setting name='authorLabel'>By</b:widget-setting>
           <b:widget-setting name='showCommentLink'>true</b:widget-setting>
           <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+          <b:widget-setting name='postLocationLabel'>Localización:</b:widget-setting>
           <b:widget-setting name='showAuthor'>false</b:widget-setting>
           <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
           <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
           <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+          <b:widget-setting name='timestampLabel'>el</b:widget-setting>
           <b:widget-setting name='reactionsLabel'/>
           <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
           <b:widget-setting name='style.layout'>1x1</b:widget-setting>
